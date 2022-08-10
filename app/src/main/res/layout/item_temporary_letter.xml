@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="20dp">
+
+    <TextView
+        android:id="@+id/to_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/to_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="#599CABC2"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="2dp"
+        android:text="수신인"
+        android:textColor="#8A9CB3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/to_tv"
+        app:layout_constraintLeft_toRightOf="@+id/to_tv"
+        app:layout_constraintTop_toTopOf="@+id/to_tv" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="#599CABC2"
+        android:minWidth="207dp"
+        android:minHeight="19dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="2dp"
+        android:text="title"
+        android:textColor="#8A9CB3"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/to_tv"
+        app:layout_constraintTop_toBottomOf="@+id/to_name_tv" />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="#599CABC2"
+        android:minWidth="207dp"
+        android:minHeight="19dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="2dp"
+        android:text="2022.XX.XX 23:45"
+        android:textColor="#8A9CB3"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_trash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
