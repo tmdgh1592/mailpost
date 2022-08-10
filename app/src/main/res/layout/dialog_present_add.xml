@@ -56,57 +56,325 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:id="@+id/desc1_tv"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/description_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:background="#599CABC2"
-            android:gravity="center"
-            android:minWidth="246dp"
-            android:paddingHorizontal="4dp"
-            android:paddingVertical="2dp"
-            android:text="담긴 선물이 없네요"
-            android:textColor="#8A9CB3"
-            android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
 
-        <TextView
-            android:id="@+id/desc2_tv"
-            android:layout_width="0dp"
+            <TextView
+                android:id="@+id/desc1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#599CABC2"
+                android:gravity="center"
+                android:minWidth="246dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="2dp"
+                android:text="담긴 선물이 없네요"
+                android:textColor="#8A9CB3"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/desc2_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#599CABC2"
+                android:gravity="center"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="2dp"
+                android:text="그리운 대상에게 마음을 담은\n선물을 보내보세요!"
+                android:textColor="#8A9CB3"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@+id/desc1_tv"
+                app:layout_constraintRight_toRightOf="@+id/desc1_tv"
+                app:layout_constraintTop_toBottomOf="@+id/desc1_tv" />
+
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="18dp"
+                android:background="#E1E1E1"
+                app:layout_constraintTop_toBottomOf="@+id/desc2_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:background="#599CABC2"
-            android:gravity="center"
-            android:paddingHorizontal="4dp"
-            android:paddingVertical="2dp"
-            android:text="그리운 대상에게 마음을 담은\n선물을 보내보세요!"
-            android:textColor="#8A9CB3"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="@+id/desc1_tv"
-            app:layout_constraintRight_toRightOf="@+id/desc1_tv"
-            app:layout_constraintTop_toBottomOf="@+id/desc1_tv" />
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="added_present_list_container, description_container" />
 
-        <View
-            android:id="@+id/divider"
+
+        <LinearLayout
+            android:id="@+id/added_present_list_container"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="18dp"
-            android:background="#E1E1E1"
-            app:layout_constraintTop_toBottomOf="@+id/desc2_tv" />
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="36dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/first_present_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_add_present"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="17dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/first_present_iv"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_add_present"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/first_present_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center|left"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="2dp"
+                    android:textColor="#8A9CB3"
+                    android:textColorHint="#8A9CB3"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/first_present_iv"
+                    app:layout_constraintRight_toLeftOf="@+id/first_present_remove_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="선물 이름" />
+
+                <ImageView
+                    android:id="@+id/first_present_remove_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="4dp"
+                    android:src="@drawable/ic_remove"
+                    android:text="담기"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/second_present_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_add_present"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="17dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/second_present_iv"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_add_present"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/second_present_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center|left"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="2dp"
+                    android:textColor="#8A9CB3"
+                    android:textColorHint="#8A9CB3"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/second_present_iv"
+                    app:layout_constraintRight_toLeftOf="@+id/second_present_remove_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="선물 이름" />
+
+                <ImageView
+                    android:id="@+id/second_present_remove_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="4dp"
+                    android:src="@drawable/ic_remove"
+                    android:text="담기"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/third_present_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_add_present"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="17dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/third_present_iv"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_add_present"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/third_present_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center|left"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="2dp"
+                    android:textColor="#8A9CB3"
+                    android:textColorHint="#8A9CB3"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/third_present_iv"
+                    app:layout_constraintRight_toLeftOf="@+id/third_present_remove_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="선물 이름" />
+
+                <ImageView
+                    android:id="@+id/third_present_remove_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="4dp"
+                    android:src="@drawable/ic_remove"
+                    android:text="담기"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/present_add_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_add_present"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="17dp">
+
+                <ImageView
+                    android:id="@+id/photo_add_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_add_present"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/present_name_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#599CABC2"
+                    android:gravity="center|left"
+                    android:maxWidth="200dp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="2dp"
+                    android:text="선물 이름을 입력해주세요"
+                    android:textColor="#8A9CB3"
+                    android:textColorHint="#8A9CB3"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/photo_add_btn"
+                    app:layout_constraintRight_toLeftOf="@+id/present_put_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/present_put_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_put_present"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="4dp"
+                    android:text="담기"
+                    android:textColor="#8A9CB3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
 
         <ImageView
             android:id="@+id/present_add_btn"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:layout_marginTop="36dp"
             android:src="@drawable/ic_add_present"
-            app:layout_constraintTop_toBottomOf="@+id/divider"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="36dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/barrier" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
