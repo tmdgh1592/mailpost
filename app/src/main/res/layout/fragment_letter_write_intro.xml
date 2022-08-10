@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.LetterWriteIntroFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="편지 쓰기"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/noti_btn"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginEnd="21dp"
+                    android:src="@drawable/ic_noti" />
+
+                <ImageView
+                    android:id="@+id/group_btn"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginEnd="21dp"
+                    android:src="@drawable/ic_group" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/desc1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="#599CABC2"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:text="발신인 이름을 바꾸실 수 있습니다."
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout" />
+
+        <TextView
+            android:id="@+id/desc2_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#599CABC2"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:text="공개편지함에서 공개됩니다."
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/desc1_tv"
+            app:layout_constraintRight_toRightOf="@+id/desc1_tv"
+            app:layout_constraintTop_toBottomOf="@+id/desc1_tv" />
+
+        <View
+            android:id="@+id/from_to_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_from_to"
+            app:layout_constraintTop_toBottomOf="@+id/desc2_tv" />
+
+        <TextView
+            android:id="@+id/from_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:text="보내는 이"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/from_to_container"
+            app:layout_constraintTop_toTopOf="@+id/from_to_container" />
+
+        <TextView
+            android:id="@+id/to_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:text="받는 이"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/to_spinner"
+            app:layout_constraintRight_toRightOf="@id/from_to_container" />
+
+        <Spinner
+            android:id="@+id/from_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintLeft_toLeftOf="@id/from_title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/from_title_tv" />
+
+        <Spinner
+            android:id="@+id/to_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/from_to_container"
+            app:layout_constraintRight_toRightOf="@+id/to_title_tv" />
+
+        <ImageView
+            android:id="@+id/illustration_iv"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#D8EBFF"
+            android:layout_marginHorizontal="62dp"
+            app:layout_constraintBottom_toTopOf="@+id/go_to_write_btn" />
+
+        <TextView
+            android:id="@+id/go_to_write_btn"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="62dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="편지 쓰러 가기"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/btn_go_to_write_letter"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
