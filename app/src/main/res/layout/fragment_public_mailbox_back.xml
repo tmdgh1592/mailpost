@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.LetterWriteIntroFragment">
+        tools:context=".presentation.LetterTemporaryActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout"
@@ -28,7 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="편지 쓰기"
+                    android:text="공개 편지함"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -59,11 +59,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:background="#599CABC2"
-            android:gravity="center"
             android:minWidth="246dp"
+            android:gravity="center"
             android:paddingHorizontal="4dp"
             android:paddingVertical="2dp"
-            android:text="발신인 이름을 바꾸실 수 있습니다."
+            android:text="Vel nunc vulputate fermentum."
             android:textColor="#8A9CB3"
             android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -77,10 +77,10 @@
             android:layout_marginTop="6dp"
             android:background="#599CABC2"
             android:gravity="center"
-            android:minWidth="246dp"
             android:paddingHorizontal="4dp"
+            android:minWidth="246dp"
             android:paddingVertical="2dp"
-            android:text="공개편지함에서 공개됩니다."
+            android:text="Non morbi a nunc at elementum."
             android:textColor="#8A9CB3"
             android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="@+id/desc1_tv"
@@ -88,63 +88,16 @@
             app:layout_constraintTop_toBottomOf="@+id/desc1_tv" />
 
         <View
-            android:id="@+id/from_to_container"
+            android:id="@+id/letter_container"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_height="354dp"
+            android:layout_marginHorizontal="45dp"
             android:layout_marginTop="18dp"
-            android:background="@drawable/bg_from_to"
-            app:layout_constraintTop_toBottomOf="@+id/desc2_tv" />
+            android:background="@drawable/img_back_card"
+            app:layout_constraintTop_toBottomOf="@+id/desc2_tv"
+            tools:layout_editor_absoluteX="45dp" />
 
-        <TextView
-            android:id="@+id/from_title_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            android:text="보내는 이"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="@+id/from_to_container"
-            app:layout_constraintTop_toTopOf="@+id/from_to_container" />
 
-        <TextView
-            android:id="@+id/to_title_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="18dp"
-            android:text="받는 이"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/to_spinner"
-            app:layout_constraintRight_toRightOf="@id/from_to_container" />
-
-        <Spinner
-            android:id="@+id/from_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:layout_constraintLeft_toLeftOf="@id/from_title_tv"
-            app:layout_constraintTop_toBottomOf="@+id/from_title_tv" />
-
-        <Spinner
-            android:id="@+id/to_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            app:layout_constraintBottom_toBottomOf="@id/from_to_container"
-            app:layout_constraintRight_toRightOf="@+id/to_title_tv" />
-
-        <ImageView
-            android:id="@+id/illustration_iv"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginHorizontal="62dp"
-            android:background="#D8EBFF"
-            app:layout_constraintBottom_toTopOf="@+id/go_to_write_btn" />
 
         <TextView
             android:id="@+id/go_to_write_btn"
@@ -158,7 +111,6 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
