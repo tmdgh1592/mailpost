@@ -88,63 +88,130 @@
             app:layout_constraintTop_toBottomOf="@+id/desc1_tv" />
 
         <View
-            android:id="@+id/from_to_container"
-            android:layout_width="270px"
-            android:layout_height="354px"
+            android:id="@+id/letter_container"
+            android:layout_width="match_parent"
+            android:layout_height="354dp"
             android:layout_marginHorizontal="45dp"
             android:layout_marginTop="18dp"
-            android:layout_marginBottom="84dp"
             android:background="@drawable/bg_from_to"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/desc2_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/desc2_tv"
+            tools:layout_editor_absoluteX="45dp" />
+
 
         <TextView
-            android:id="@+id/from_title_tv"
+            android:id="@+id/to_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="313dp"
-            android:layout_marginBottom="12dp"
-            android:text="보내는 이"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/from_spinner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="@+id/from_to_container"
-            app:layout_constraintTop_toTopOf="@+id/from_to_container" />
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="216dp"
+            android:layout_marginBottom="303dp"
+            android:text="To."
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/letter_container"
+            app:layout_constraintEnd_toEndOf="@+id/letter_container"
+            app:layout_constraintStart_toStartOf="@+id/letter_container"
+            app:layout_constraintTop_toTopOf="@+id/letter_container" />
 
         <TextView
-            android:id="@+id/to_title_tv"
+            android:id="@+id/recipient_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="18dp"
-            android:text="받는 이"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/to_spinner"
-            app:layout_constraintRight_toRightOf="@id/from_to_container" />
+            android:text="수신인"
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/to_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/to_tv"
+            app:layout_constraintTop_toTopOf="@+id/to_tv" />
 
-        <Spinner
-            android:id="@+id/from_spinner"
+        <ImageView
+            android:id="@+id/smile_iv"
+            android:layout_width="15.43dp"
+            android:layout_height="15.43dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="304dp"
+            android:src="@drawable/ic_smile"
+            app:layout_constraintBottom_toBottomOf="@+id/letter_container"
+            app:layout_constraintEnd_toEndOf="@+id/letter_container"
+            app:layout_constraintTop_toTopOf="@+id/letter_container" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="16sp"
+            android:layout_marginLeft="2dp"
+            app:layout_constraintTop_toTopOf="@id/smile_iv"
+            app:layout_constraintBottom_toBottomOf="@id/smile_iv"
+            app:layout_constraintLeft_toRightOf="@id/smile_iv"
+            android:background="#599CABC2"
+            android:textColor="#8A9CB3" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="title"
+            android:textColor="#8A9CB3"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/to_tv"
+            app:layout_constraintTop_toBottomOf="@id/to_tv" />
+
+        <TextView
+            android:id="@+id/content1_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:layout_constraintLeft_toLeftOf="@id/from_title_tv"
-            app:layout_constraintTop_toBottomOf="@+id/from_title_tv" />
+            android:text="content\ncontent\ncontent\ncontent\ncontent"
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            android:lineSpacingExtra="6dp"
+            app:layout_constraintStart_toStartOf="@+id/title_tv"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
 
-        <Spinner
-            android:id="@+id/to_spinner"
+        <TextView
+            android:id="@+id/from_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            app:layout_constraintBottom_toBottomOf="@id/from_to_container"
-            app:layout_constraintRight_toRightOf="@+id/to_title_tv" />
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="258dp"
+            android:layout_marginEnd="123dp"
+            android:layout_marginBottom="77dp"
+            android:text="From."
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/letter_container"
+            app:layout_constraintEnd_toEndOf="@+id/letter_container"
+            app:layout_constraintStart_toStartOf="@+id/letter_container"
+            app:layout_constraintTop_toTopOf="@+id/letter_container" />
 
+        <TextView
+            android:id="@+id/sender_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="발신인"
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/from_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/from_tv"
+            app:layout_constraintTop_toTopOf="@+id/from_tv" />
+
+        <TextView
+            android:id="@+id/tag1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="301dp"
+            android:layout_marginBottom="34dp"
+            android:text="tag"
+            android:textColor="#8A9CB3"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/letter_container"
+            app:layout_constraintStart_toStartOf="@+id/letter_container"
+            app:layout_constraintTop_toTopOf="@+id/letter_container" />
 
         <TextView
             android:id="@+id/go_to_write_btn"
@@ -154,12 +221,10 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/btn_go_to_write_letter"
             android:gravity="center"
-            android:text="편지 구경하기"
+            android:text="편지 쓰러 가기"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="62dp" />
-
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
