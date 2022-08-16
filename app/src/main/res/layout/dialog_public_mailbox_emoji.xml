@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+    </data>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_emoji"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:visibility="visible"
+        android:paddingBottom="17.86dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="80dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="80dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="80dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="80dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textColor="#8A9CB3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="#599CABC2"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="40dp"
+            android:drawableTop="@drawable/ic_blank_emoji"
+            android:drawablePadding="1.9dp"/>
+
+
+
+
+
+    </GridLayout>
+
+
+</layout>
