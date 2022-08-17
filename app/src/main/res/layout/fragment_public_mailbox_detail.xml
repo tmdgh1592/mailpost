@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.LetterTemporaryActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="9.6dp"
+                    android:layout_height="16.8dp"
+                    android:layout_marginStart="27dp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="공개 편지함"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+       <TextView
+           android:id="@+id/sort_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="정렬"
+           android:textSize="16sp"
+           android:textColor="#000000"
+           app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginStart="20dp"
+           android:layout_marginTop="13dp" />
+
+        <ImageView
+            android:id="@+id/sort_iv"
+            android:layout_width="14dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_sort"
+            app:layout_constraintStart_toEndOf="@id/sort_tv"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="7dp"/>
+
+
+        <ImageView
+            android:id="@+id/send_iv"
+            android:layout_width="13.5dp"
+            android:layout_height="13.5dp"
+            android:src="@drawable/ic_paperplane"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="19.91dp" />
+
+        <View
+            android:id="@+id/linebar"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="44dp"
+            android:background="#E1E1E1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout" />
+
+        <View
+            android:id="@+id/to_from_container"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_to_from"
+            app:layout_constraintTop_toBottomOf="@id/linebar"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/to_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To."
+            android:textSize="16sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/to_from_container"
+            app:layout_constraintTop_toTopOf="@id/to_from_container"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/sender_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textSize="16sp"
+            android:textColor="#8A9CB3"
+            android:background="#599CABC2"
+            android:paddingEnd="43dp"
+            app:layout_constraintStart_toEndOf="@id/to_tv"
+            app:layout_constraintTop_toTopOf="@+id/to_tv"/>
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022.XX.XX"
+            android:textSize="16sp"
+            android:textColor="#8A9CB3"
+            android:background="#599CABC2"
+            app:layout_constraintEnd_toEndOf="@id/to_from_container"
+            app:layout_constraintTop_toTopOf="@+id/to_tv"
+            android:layout_marginEnd="6dp"/>
+
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#8A9CB3"
+            android:gravity="center"
+            android:background="#599CABC2"
+            app:layout_constraintStart_toStartOf="@id/to_from_container"
+            app:layout_constraintEnd_toEndOf="@id/to_from_container"
+            app:layout_constraintTop_toTopOf="@+id/to_from_container"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/from_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From."
+            android:textSize="16sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/to_from_container"
+            app:layout_constraintTop_toTopOf="@id/to_from_container"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="63dp" />
+
+        <TextView
+            android:id="@+id/receiver_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textSize="16sp"
+            android:textColor="#8A9CB3"
+            android:background="#599CABC2"
+            android:paddingEnd="43dp"
+            app:layout_constraintStart_toEndOf="@id/from_tv"
+            app:layout_constraintTop_toTopOf="@+id/from_tv"/>
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="text\ntext\ntext\ntext\ntext\ntext"
+            android:textSize="16sp"
+            android:textColor="#8A9CB3"
+            android:background="#599CABC2"
+            app:layout_constraintStart_toStartOf="@id/to_from_container"
+            app:layout_constraintTop_toBottomOf="@id/to_from_container"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="20dp"
+            android:lineSpacingExtra="6dp"/>
+
+        <ImageView
+            android:id="@+id/content_iv"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:background="@drawable/img_blank"
+            app:layout_constraintTop_toBottomOf="@id/content_tv"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/tag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="태그"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/content_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp" />
+
+
+        <ImageView
+            android:id="@+id/tag1_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_tag"
+            app:layout_constraintTop_toTopOf="@id/tag_tv"
+            app:layout_constraintStart_toEndOf="@id/tag_tv"
+            android:layout_marginStart="27dp"/>
+
+        <ImageView
+            android:id="@+id/tag2_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_tag"
+            app:layout_constraintTop_toTopOf="@id/tag_tv"
+            app:layout_constraintStart_toEndOf="@id/tag1_iv"
+            android:layout_marginStart="10dp"/>
+
+        <ImageView
+            android:id="@+id/tag3_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_tag"
+            app:layout_constraintTop_toTopOf="@id/tag_tv"
+            app:layout_constraintStart_toEndOf="@id/tag2_iv"
+            android:layout_marginStart="10dp"/>
+
+        <View
+            android:id="@+id/linebar2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="49dp"
+            android:background="#E1E1E1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/content_iv" />
+
+        <ImageView
+            android:id="@+id/emoji_iv"
+            android:layout_width="21.08dp"
+            android:layout_height="21dp"
+            android:background="@drawable/ic_emoji"
+            app:layout_constraintTop_toBottomOf="@id/linebar2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="14dp"/>
+
+        <ImageView
+            android:id="@+id/emoji1_iv"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:background="@drawable/ic_blank_emoji"
+            app:layout_constraintTop_toTopOf="@id/emoji_iv"
+            app:layout_constraintStart_toEndOf="@id/emoji_iv"
+            android:layout_marginStart="33.93dp"/>
+
+        <TextView
+            android:id="@+id/emoji1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="56"
+            android:textSize="16sp"
+            android:textColor="#8A9CB3"
+            android:background="#599CABC2"
+            app:layout_constraintTop_toTopOf="@id/emoji1_iv"
+            app:layout_constraintStart_toEndOf="@id/emoji1_iv"
+            android:layout_marginStart="4.2dp"/>
+
+
+        <ImageView
+            android:id="@+id/emoji2_iv"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:background="@drawable/ic_blank_emoji"
+            app:layout_constraintTop_toTopOf="@id/emoji_iv"
+            app:layout_constraintStart_toEndOf="@id/emoji1_tv"
+            android:layout_marginStart="12.2dp"/>
+
+        <TextView
+            android:id="@+id/emoji2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textSize="16sp"
+            android:textColor="#8A9CB3"
+            android:background="#599CABC2"
+            app:layout_constraintTop_toTopOf="@id/emoji1_iv"
+            app:layout_constraintStart_toEndOf="@id/emoji2_iv"
+            android:layout_marginStart="4.2dp"/>
+
+        <ImageView
+            android:id="@+id/emoji3_iv"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:background="@drawable/ic_blank_emoji"
+            app:layout_constraintTop_toTopOf="@id/emoji_iv"
+            app:layout_constraintStart_toEndOf="@id/emoji2_tv"
+            android:layout_marginStart="12.2dp"/>
+
+        <TextView
+            android:id="@+id/emoji3_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textSize="16sp"
+            android:textColor="#8A9CB3"
+            android:background="#599CABC2"
+            app:layout_constraintTop_toTopOf="@id/emoji1_iv"
+            app:layout_constraintStart_toEndOf="@id/emoji3_iv"
+            android:layout_marginStart="4.2dp"/>
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
